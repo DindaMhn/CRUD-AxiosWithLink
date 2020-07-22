@@ -1,4 +1,4 @@
-button{
+.btn-grad{
     margin-top: 35px;
     background-color: white;
     border: 1px solid rgb(231, 165, 176);
@@ -18,13 +18,13 @@ button{
       color: white;
       background-color: rgb(231, 165, 176);
 }
-button:hover {background-color: #fb339e}
+.btn-grad:hover {background-color: #fb339e}
 .card{
   display: inline-block;
   max-width: 500px;
   min-width: 400px;
   margin-top: 150px;
-  margin-left: 800px;
+  margin-left: -600px;
   box-sizing: border-box;
   padding: 30px 25px;
   background-color: rgb(246, 230, 232);
@@ -32,14 +32,13 @@ button:hover {background-color: #fb339e}
   left: 50%;
   box-shadow: 10px 20px #888888;
 }
-input {
+.inputLogin {
     border: none;
     height:50px;
     width: 250px;
     background-color: rgb(246, 230, 232);
     border-bottom: 2px solid rgb(231, 165, 176);;
   }
-
 p{
     color:red;
     font-weight: bold;
