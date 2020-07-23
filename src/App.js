@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        {/* <SamplePropTypes/> */}
+        {/* <SamplePropTypes name={21} age={"dinda"}/> */}
         <BrowserRouter>
           <Navigation/>
         </BrowserRouter>

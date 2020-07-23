@@ -45,10 +45,6 @@ const getArtikel = async function(){
     let artikel = await axios.get("http://localhost:3000/Artikel")
     return artikel
 }
-const getArtikelById = async function(id){
-    let artikel = await axios.get("http://localhost:3000/Artikel/"+id)
-    return artikel
-}
 const createArtikel = async (form)=>{
     let artikel = await axios.post("http://localhost:3000/Artikel",form)
     return artikel
@@ -62,5 +58,5 @@ const deleteArtikel = async (id)=>{
     return artikel
 }
 
-export {getArtikel,getArtikelById,createArtikel,updateArtikel,deleteArtikel}
+export {getArtikel,createArtikel,updateArtikel,deleteArtikel}
 
