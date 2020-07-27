@@ -16,10 +16,27 @@ class Navigation extends Component {
     state = {
         auth: false
     }
+    
+    componentDidMount(){
+        if(localStorage.getItem("login") !== null){
+            this.setState({
+                auth:true
+            })
+            this.props.history.push({
+                pathname:this.props.location.pathname
+            })
+        } else {
+            this.props.history.push({
+                pathname:"/"
+            })
+        }
+        
+    }
     onLogin = ()=>{
         this.setState({
             auth :true
-        })  
+        }) 
+        localStorage.setItem("login",this.state.auth) 
         this.props.history.push({
             pathname:"/home"
         })
@@ -28,9 +45,11 @@ class Navigation extends Component {
         this.setState({
             auth :false
         }) 
+        localStorage.clear()
         this.props.history.push({
             pathname:"/"
         }) 
+       
     }
     
     render() {
@@ -39,8 +58,10 @@ class Navigation extends Component {
                 key={route.id}
                 path={route.path} render={
                     (props) => {
-                        return this.state.auth ?
-                            <route.component {...props} /> : <Redirect to='/' />
+                        if (this.state.auth){
+                        return <route.component {...props} />}
+                         else
+                        { return <Redirect to='/' /> }
                     }
                 } />
         });

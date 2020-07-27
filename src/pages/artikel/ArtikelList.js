@@ -4,7 +4,7 @@ import { Table } from 'react-bootstrap'
 import LoadingPage from '../../components/LoadingPage'
 
 const ArtikelList = (props) => {
-    const { isLoading, showDetail, artikel, message, showUpdate, deleteArtikel } = props;
+    const {isLoading, showDetail, message, showUpdate, deleteArtikel,artikel } = props;
     if (isLoading) {
         return (<LoadingPage />);
     }

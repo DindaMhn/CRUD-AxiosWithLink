@@ -15,10 +15,6 @@ class Header extends Component {
                 <nav className="navbar navbar-expand-lg">
                 <ul className="navbar-nav">
                     {showPage}
-                    {/* <button className="nav-button" onClick={()=>page("homePage")}>Home</button>
-                    <button className="nav-button" onClick={()=>page("artikelPage")}>Artikel</button>
-                    <button className="nav-button" onClick={()=>page("userPage")}>User</button>
-                    <button className="nav-button" onClick={()=>page("logout")}>Logout</button> */}
                 </ul>
             </nav>
         );
